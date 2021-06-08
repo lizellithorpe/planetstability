@@ -1,0 +1,37 @@
+##########################
+# Liz Ellithorpe         #
+# Final Project          #
+#   for Machine Learning #
+#   Fall 2020            #
+##########################
+
+Included in this github repo is my final project for a Machine Learning
+class taken at the University of Oklahoma in Fall 2020. The final project
+was open ended, and I chose to create my first neural network in order
+to attempt to replicate the success of the neural net employed in
+Lam & Kipping 2018. This neural net is meant to predict the long time
+orbital stability of planets orbiting a binary star system. This stability
+criterion was well established by Holman & Wiegert 1999, but near the
+critical orbit where planets begin to go unstable, there are 'islands' of
+instability that are not well described by the original 1999 criterion.
+Lam & Kipping utilized deep learning to map the parameter space near the
+critical orbit.
+
+I generated the training data using REBOUND, an off the shelf numerical
+integrator that can be run in both Python and C. The shell used to run REBOUND
+is found in 'training_set.sh'. I recommend that it is only run either on a network with a job scheduler (i.e., run with slurm) or run it on a cron job. However, I have also included the complete training set used by the neural net.
+
+The python notebook 'neural_net_training.ipynb' contains all the code
+used to train and to test the neural net. It uses tensorflow and keras.
+
+
+Also included is the trained neural net by Lam & Kipping used to
+test my own results. This is the file '6layer_48neuron.h5'. All of their work
+can be found at github.com/CoolWorlds/orbital-stability and was referenced
+heavily while I was taking this first step at using neural nets.
+
+Finally, I include both a writeup of the final project ('writeup.pdf') and the slides used for my final talk ('talkslides.pdf').
+
+
+
+-END OF README-
